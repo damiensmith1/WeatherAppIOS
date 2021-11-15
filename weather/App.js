@@ -43,14 +43,12 @@ export default class App extends React.Component {
 		}
 	}
 
-	// this method auto runs when page finished loading - might not be used
-	// find out how to update itself - location and weather
 	componentDidMount() {
 		let locationConfigs = {
 			timeOut: 100,
 			maximumAge: 60 * 60 // how long to store the coordinates
 		};
-		this.setState({ ready: false, error: null }); // built in functions for state obejct
+		this.setState({ ready: false, error: null }); 
 
 		// built in to javascript - navigator object has geolocation object which has currentposition method
 		// params: on fail function, on success function, options
